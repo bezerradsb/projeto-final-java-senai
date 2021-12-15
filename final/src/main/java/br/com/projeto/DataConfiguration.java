@@ -9,7 +9,7 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
-	@Configuration
+@Configuration
 	public class DataConfiguration {
 		
 		@Bean
@@ -29,7 +29,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 			adapter.setShowSql(true);
 			adapter.setGenerateDdl(true);
 			adapter.setDatabasePlatform("org.hibernate.dialect.MySQL5Dialect");
-			adapter.setPrepareConnection(true);
 			return adapter;
 		}
 	}
